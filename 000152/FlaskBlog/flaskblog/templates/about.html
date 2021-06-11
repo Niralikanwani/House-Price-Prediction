@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+     <form name="MyForm" action="http://127.0.0.1:8083/result" onsubmit="return validationForm()" method="POST">
+
+     	<table>
+     		<tr>
+     			<td><label for="Bedroom">Bedroom</label></td>
+     			<td><input id="Bedroom" class="input" type="number" placeholder="No. of Bedroom" step="0.5" name="Bedroom" class="form-control form-control-lg" /></span></td>
+     		</tr>
+            <tr>
+            	<td><label for="Bathroom">Bathroom</label></td>
+            	<td><input id="Bathroom" class="input" type="number" placeholder="No. of Bathrooms" step="0.01" name="Bathroom" class="form-control form-control-lg" required /></td>
+            </tr>
+			<tr>
+				<td><label for="LivingRoomArea">Area of Living room</label></td>
+				<td><input id="LivingRoomArea" class="input" type="number" placeholder="Area in sq feet of living room" step="0.5" name="sqft_living" required class="form-control form-control-lg" /></td>
+			</tr>                        
+			<tr>
+				<td> <label for="ParkinLot">Area of Parking Lot</label></td>
+				<td><input id="ParkinLot" class="input" type="number" placeholder="Area of parking lot in sq. feet" step="0.5" name="sqft_lot" required class="form-control form-control-lg"/></td>
+			</tr>
+            <tr>
+            	<td> <label for="Floors">No. of floors</label></td>
+            	<td><input id="Floors" class="input" type="number" min="1" placeholder="No. of Floors " name="floors" required class="form-control form-control-lg"/></td>
+            </tr>                       
+            <tr>
+            	<td><label for="aboveground">Sq. feet above ground</label></td>
+            	<td><input id="aboveground" class="input" type="number" placeholder="Sq. feet above ground"step="0.5" required name="sqft_Above" class="form-control form-control-lg"/></td>
+            </tr>
+            <tr>
+            	<td><label for="Basement">Area of Basement</label></td>
+            	<td><input id="Basement" class="input" type="number" placeholder="Sq. feet of basement" step="0.5" required name="Sqft_basement" class="form-control form-control-lg" /></td>
+            </tr>                        
+            <tr>
+            	<td><label for="year">Year Built</label></td>
+            	<td>
+				<input type="text" id ="year" class="input" placeholder="Year of building" name="YrBuilt" required class="form-control form-control-lg"
+
+				></td>
+            </tr>
+            <tr>
+            	<td><label for="renowed">Year Renovated</label></td>
+            	<td><input id="renowed" class="input" type="number" placeholder="Year of renowed" required class="form-control form-control-lg"
+						   name="Yr_renowed"/></td>
+            </tr>                        
+            <tr>
+            	<td><label for="zip">Zip code</label></td>
+            	<td><input id="zip" class="input" type="number" placeholder="zipCode" required  class="form-control form-control-lg" name="zip_code"/></td>
+            </tr>
+            <tr>
+            	<td colspan="2"><input class="btn" type="submit" value="PREDICT" class="btn btn-outline-info" /></td>
+            </tr>                        
+        </table>
+    </form>
+{% endblock content %}
